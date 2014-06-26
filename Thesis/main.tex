@@ -1,0 +1,78 @@
+
+
+\documentclass[a4paper,12pt,spanish]{book}
+
+
+\usepackage{./estilos/estiloBase} % Basicamente son todas las
+                                  % librerias usadas. En caso de que
+                                  % falten librerias se van añadiendo
+                                  % al fichero.
+\usepackage{./estilos/colores}  % Algunos colores ya generados, para
+                                % los algunos estilos más avanzados.
+\usepackage{./estilos/comandos} % Algunos comandos personalizados
+
+\graphicspath{{./imagenes/}} % Indicamos la ruta donde se encuentran
+                             % las imagenes, para ahorrarnos la ruta
+                             % completa, y solo modificar aquí si en
+                             % un momento dado lo movemos
+\usepackage{enumitem}
+\bibliographystyle{ieeetr}
+
+\setlength\parindent{30pt}
+
+\begin{document}
+
+% Renombramos las figuras y las tablas
+\renewcommand{\figurename}{Figura}
+\renewcommand{\listfigurename}{Indice de figuras}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Indice de tablas}
+
+\pagestyle{empty}
+\input{portada.tex}
+\cleardoublepage
+
+\input{primerahoja.tex}
+\cleardoublepage
+\pagestyle{plain}
+
+\frontmatter % Introducción, índices ...
+
+\input{previo.tex}
+\cleardoublepage
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter % Contenido en si ...
+%\pagestyle{headings}
+\nocite{*}
+\chapter{Introduccion}
+\input{cap1.tex}
+
+\chapter{Estado del arte}
+\input{cap2.tex}
+
+\chapter{Desarrollo del proyecto}
+\input{cap3.tex}
+
+\chapter{Aplicacion}
+\input{cap4.tex}
+
+\chapter{Conclusiones y futuras mejoras}
+\input{cap5.tex}
+
+
+\backmatter % Apéndices, bibliografia ...
+
+
+\clearpage
+
+
+\addcontentsline{toc}{chapter}{Bibliografía y referencias}
+
+\bibliography{bibliografia}
+%\input{biblio.tex}
+
+\end{document}

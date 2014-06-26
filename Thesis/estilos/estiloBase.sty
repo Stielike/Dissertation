@@ -1,0 +1,53 @@
+% - Fichero con paquetes que se usan a menudo. Prablemente llege a
+% - tener más de los necesitados, sin embargo ahorra muchos
+% - quebraderos de cabeza.
+
+\ProvidesPackage{estiloBase}
+
+% -- Paquetes de estilo del documento.
+\usepackage[applemac]{inputenc} % Codificación de los ficheros de entrada
+\usepackage{times} 
+\usepackage[T1]{fontenc} % Formato de las fuentes
+\usepackage[spanish]{babel} % Traducción al español
+\usepackage{color} % Paquete de colores
+\usepackage[colorlinks=true,linkcolor=verde]{hyperref}
+
+                             % Añade referencias en el fichero pdf,
+                                % de color verde en este caso. Mirar
+                                % el paquete de colores para ver los
+                                % distintos colores.
+\usepackage[left=2.5cm,top=3.5cm,right=2.5cm,bottom=3.5cm]{geometry}
+                                % Sin este paquete, el fichero toma
+                                % demasiados márgenes. Con esto los
+                                % reducimos, aprovechando algo más el
+                                % folio.
+\usepackage{subfigure} % subgr�ficos
+
+
+%\usepackage[Rejne]{fncychap}% Sonny, Glenn, Lenny, Conny, Rejne, Bjarne
+% Este último paquete, modifica el estilo del título de los
+% capítulos. Descomentalo y prueba las 6 opciones.
+
+% -- Paquetes matemáticos: fuentes, simbolos, teoremas...
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+% -- Funcionalidades extras para las tablas
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+% -- Para mostrar código, resaltando sintaxis de muchos lenguajes de
+% -- programación, como C/C++, Java, SQL, Pascal, y un largo etc...
+\usepackage{listings}
+
+% -- Algunos paquetes más
+\usepackage{caption} % Permite añadir pies de imagen y de tabla
+\usepackage{eurosym} % Para el simbolo del euro
+\usepackage{float} % Nos permite trabajar con objetos float.
+\usepackage{fullpage} % Nos da más opciones para el formateo de una
+                      % página
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{tikz} % Parar generar gráficos avanzados
